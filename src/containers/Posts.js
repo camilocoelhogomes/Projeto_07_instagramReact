@@ -38,4 +38,14 @@ const Post = () => {
     );
 }
 
-export default Post;
+const Posts = () => {
+    return (
+        <div class="posts">
+            <Post />
+        </div>
+
+    );
+}
+
+
+export default Posts;
