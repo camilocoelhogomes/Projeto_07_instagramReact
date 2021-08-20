@@ -1,10 +1,18 @@
 const Post = () => {
+
+    const userName = 'meowed';;
+    const profileImg = 'assets/img/meowed.svg';
+    const postContent = 'assets/img/gato-telefone.svg';
+    const likeByUser = 'respondeai';
+    const likeByImg = "assets/img/respondeai.svg";
+    const numberOfLikes = 101.523;
+
     return (
         <div class="post">
             <div class="topo">
                 <div class="usuario">
-                    <img src="assets/img/meowed.svg" />
-                    meowed
+                    <img src={profileImg} />
+                    {userName}
                 </div>
                 <div class="acoes">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -12,7 +20,7 @@ const Post = () => {
             </div>
 
             <div class="conteudo">
-                <img src="assets/img/gato-telefone.svg" />
+                <img src={postContent} />
             </div>
 
             <div class="fundo">
@@ -28,9 +36,9 @@ const Post = () => {
                 </div>
 
                 <div class="curtidas">
-                    <img src="assets/img/respondeai.svg" />
+                    <img src={likeByImg} />
                     <div class="texto">
-                        Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+                        Curtido por <strong>{likeByUser}</strong> e <strong>outras {numberOfLikes} pessoas</strong>
                     </div>
                 </div>
             </div>

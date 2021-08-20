@@ -1,10 +1,13 @@
 const Sugestao = () => {
+    const img = "assets/img/bad.vibes.memes.svg";
+    const user = "bad.vibes.memes";
+
     return (
         <div class="sugestao">
             <div class="usuario">
-                <img src="assets/img/bad.vibes.memes.svg" />
+                <img src={img} />
                 <div class="texto">
-                    <div class="nome">bad.vibes.memes</div>
+                    <div class="nome">{user}</div>
                     <div class="razao">Segue você</div>
                 </div>
             </div>
@@ -14,17 +17,28 @@ const Sugestao = () => {
     );
 }
 
+const Usuario = () => {
+
+    const img = "assets/img/catanacomics.svg";
+    const igName = 'catanacomics';
+    const userName = 'Catana';
+
+    return (
+        <div class="usuario">
+            <img src={img} />
+            <div class="texto">
+                <strong>{igName}</strong>
+                {userName}
+            </div>
+        </div>
+    );
+}
+
 const SideBar = () => {
     return (
         <div class="sidebar">
-            <div class="usuario">
-                <img src="assets/img/catanacomics.svg" />
-                <div class="texto">
-                    <strong>catanacomics</strong>
-                    Catana
-                </div>
-            </div>
 
+            <Usuario />
             <div class="sugestoes">
                 <div class="titulo">
                     Sugestões para você

@@ -1,11 +1,13 @@
 const Story = () => {
+    const img = "assets/img/9gag.svg";
+    const usuario = '9gag'
     return (
         <div class="story">
             <div class="imagem">
-                <img src="assets/img/9gag.svg" />
+                <img src={img} />
             </div>
             <div class="usuario">
-                9gag
+                {usuario}
             </div>
         </div>
     );
