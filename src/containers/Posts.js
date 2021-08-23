@@ -1,5 +1,4 @@
 const Post = (props) => {
-
     return (
         <div class="post">
             <div class="topo">
@@ -13,7 +12,18 @@ const Post = (props) => {
             </div>
 
             <div class="conteudo">
-                <img src={props.postContent} />
+                {
+                    (props.postContent.substr(props.postContent.length - 3) === 'ogv') ?
+                        <video className='publicacao-img' controls autoplay='true'>
+                            <source src={props.postContent} />
+                        </video> :
+                        (props.postContent.substr(props.postContent.length - 3) === 'mp4') ?
+                            <video className='publicacao-img' controls autoplay='true'>
+                                <source src={props.postContent} />
+                            </video> :
+                            <img src={props.postContent} />
+
+                }
             </div>
 
             <div class="fundo">
@@ -29,7 +39,7 @@ const Post = (props) => {
                 </div>
 
                 <div class="curtidas">
-                    <img src={props.likeByImg} />
+                    <image src={props.likeByImg} />
                     <div class="texto">
                         Curtido por <strong>{props.likeByUser}</strong> e <strong>outras {props.numberOfLikes} pessoas</strong>
                     </div>
@@ -53,6 +63,14 @@ const Posts = () => {
             userName: 'barked',
             profileImg: 'assets/img/barked.svg',
             postContent: 'assets/img/dog.svg',
+            likeByUser: 'adorable_animals',
+            likeByImg: "assets/img/adorable_animals.svg",
+            numberOfLikes: 99.159,
+        },
+        {
+            userName: 'barked',
+            profileImg: 'assets/img/barked.svg',
+            postContent: 'assets/video/video.ogv',
             likeByUser: 'adorable_animals',
             likeByImg: "assets/img/adorable_animals.svg",
             numberOfLikes: 99.159,
